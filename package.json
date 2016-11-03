@@ -1,0 +1,27 @@
+{
+  "name": "ide-deploy-config",
+  "version": "0.0.1",
+  "description": "Set JetBrains IDE deployment config from config file.",
+  "keywords": [
+    "cli"
+  ],
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "ide-deploy-config": "./bin/ide-deploy-config.js"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrey-hohlov/ide-deploy-config.git"
+  },
+  "author": "Andrey Hohlov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrey-hohlov/ide-deploy-config/issues"
+  }
+}
