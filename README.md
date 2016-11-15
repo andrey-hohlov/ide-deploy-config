@@ -40,6 +40,8 @@ $ cd my-project
 $ touch deploy-config.json
 ```
 
+Also you can run `ide-deploy-config init` for create config file.
+
 Content of `deploy-config.json`:
 
 ```json
