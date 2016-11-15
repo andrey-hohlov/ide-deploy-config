@@ -1,7 +1,9 @@
 # ide-deploy-config
 Ease set / switch deployment config for JetBrains IDE from config file using node CLI.
 
-> Tested for PhpStorm 2016.2 on macOS Sierra 10.12.1 
+Tested on:
+- PhpStorm 2016.2 + macOS Sierra 10.12.1 
+- PhpStorm 2016.2 + Windows 10 
 
 > Help with testing! Write if it's works or not works in you system.
 
