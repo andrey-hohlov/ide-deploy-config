@@ -49,6 +49,11 @@ function cli() {
   var env = args[0];
   var configSrc = args[1] || process.cwd() + '/deploy-config.json';
 
+  if (env === 'init') {
+    console.log('Create empty deployment configuration file');
+    return fs.createReadStream(__dirname + '/deploy-config-example.json').pipe(fs.createWriteStream(process.cwd() + '/deploy-config.json'));
+  }
+
   fs.readFile(configSrc, 'utf8', function(err, data) {
     if (err) throw err;
 
@@ -63,7 +68,7 @@ function cli() {
     }
 
     if (!config) {
-      throw new Error('Сonfig for ' + env +' could not be found');
+      throw new Error('Configuration for ' + env +' could not be found');
     }
 
     var configString = makeConfigString(config);
@@ -76,9 +81,8 @@ function cli() {
 
       fs.writeFile(configFile, configString, { flag: 'w' }, function (err) {
         if (err) throw err;
-        console.log('IDE deployment config set for "' + env + '"');
+        console.log('IDE deployment configuration set for "' + env + '"');
       });
     });
-
   });
 }

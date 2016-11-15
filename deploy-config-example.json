@@ -1,0 +1,17 @@
+{
+  "production": {
+    "serverName": "serverName",
+    "serverPath": "/",
+    "localPath": "$PROJECT_DIR$",
+    "autoUpload": "Always",
+    "autoUploadExternalChanges": true,
+    "excludedLocal": [
+      "$PROJECT_DIR$/.idea",
+      "$PROJECT_DIR$/node_modules",
+      "$PROJECT_DIR$/deploy-config.json"
+    ],
+    "excludedServer": []
+  }
+}
+
+
