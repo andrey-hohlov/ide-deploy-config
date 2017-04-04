@@ -1,6 +1,6 @@
 {
   "name": "ide-deploy-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Set JetBrains IDE deployment config from config file.",
   "keywords": [
     "cli"
