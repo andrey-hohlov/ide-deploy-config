@@ -10,7 +10,7 @@ function makeConfigString(config) {
   configString =
     '<?xml version="1.0" encoding="UTF-8"?>' +
     '<project version="4">' +
-    '<component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="'+config.serverName+'" autoupload="'+config.autoUpload+'" autoUploadExternalChanges="'+config.autoUploadExternalChanges+'" notifyRemoteChanges="true">' +
+    '<component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="'+config.serverName+'" autoUpload="'+config.autoUpload+'" autoUploadExternalChanges="'+config.autoUploadExternalChanges+'" notifyRemoteChanges="true">' +
     '<serverData>' +
     '<paths name="'+config.serverName+'">' +
     '<serverdata>' +
