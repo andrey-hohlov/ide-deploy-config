@@ -114,7 +114,8 @@ Go to project root and run script:
 
 ## Changelog
 
-#### 2.0.0
+#### 1.0.0
+
 * Rewrite to ES6
 * Add multiple mappings config instead serverPath and localPath options. `Breaking change`
 
