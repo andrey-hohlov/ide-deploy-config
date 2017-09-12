@@ -5,14 +5,19 @@
   "keywords": [
     "cli"
   ],
-  "main": "index.js",
-  "scripts": {},
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "rimraf lib/* && babel index.js -d lib",
+    "prepublish": "npm run compile",
+    "eslint": "eslint index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "bin": {
     "ide-deploy-config": "./bin/ide-deploy-config.js"
   },
   "preferGlobal": true,
   "engines": {
-    "node": ">=4.0.0",
+    "node": ">=6.0.0",
     "npm": ">=2.0.0"
   },
   "repository": {
@@ -23,5 +28,48 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/andrey-hohlov/ide-deploy-config/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "airbnb-base"
+    ],
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "global-require": 0,
+      "linebreak-style": 0,
+      "no-console": 0,
+      "no-new": 0,
+      "no-plusplus": 0,
+      "no-param-reassign": 0,
+      "no-shadow": 0,
+      "no-underscore-dangle": 0
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "ignore": [
+      "node_modules/**/*"
+    ],
+    "plugins": []
   }
 }

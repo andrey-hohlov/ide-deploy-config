@@ -29,7 +29,7 @@ $ npm install ide-deploy-config -g
 0. Go to `Tools - Deployment - Configuration` and create server
 0. Set `Name` for server and access data: `FTP host`, `Port`, `Root path`, `Username`,  `Password`
 
-It's all. Mappings and excluded pathes we configure with script.
+It's all. Mappings and excluded paths will be configured with script.
 
 
 ### Create config .json file
@@ -49,10 +49,15 @@ Content of `deploy-config.json`:
 {
   "dev": {
     "serverName": "serverName",
-    "serverPath": "/public_html",
-    "localPath": "$PROJECT_DIR$",
     "autoUpload": "Always",
     "autoUploadExternalChanges": true,
+    "mappings": [
+      {
+        "deploy": "/",
+        "local": "$PROJECT_DIR$",
+        "web": "/"
+      }
+    ],
     "excludedLocal": [
       "$PROJECT_DIR$/.idea",
       "$PROJECT_DIR$/bower_components",
@@ -65,10 +70,15 @@ Content of `deploy-config.json`:
   },
   "production": {
     "serverName": "anotherServerName",
-    "serverPath": "/public_html",
-    "localPath": "$PROJECT_DIR$",
     "autoUpload": "Always",
     "autoUploadExternalChanges": true,
+    "mappings": [
+      {
+        "deploy": "/",
+        "local": "$PROJECT_DIR$",
+        "web": "/"
+      }
+    ],
     "excludedLocal": [
        "$PROJECT_DIR$/.idea",
        "$PROJECT_DIR$/bower_components",
@@ -101,6 +111,12 @@ Go to project root and run script:
     $ ide-deploy-config stage configs/deploy.json // set 'stage' deployment configuration from configs/deploy.json
 ```
 
+
+## Changelog
+
+#### 2.0.0
+* Rewrite to ES6
+* Add multiple mappings config instead serverPath and localPath options. `Breaking change`
 
 ## License
 
