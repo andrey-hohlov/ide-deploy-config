@@ -7,7 +7,7 @@ function makeConfigString(config) {
   const serverName = config.serverName; // eslint-disable-line prefer-destructuring
   const autoUpload = config.autoUpload || false;
   const autoUploadExternalChanges = config.autoUploadExternalChanges || false;
-  const notifyRemoteChanges = config.notifyRemoteChanges || false;
+  const notifyRemoteChanges = config.notifyRemoteChanges || true;
 
   const excludedLocal = [];
   const excludedServer = [];
