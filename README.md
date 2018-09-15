@@ -114,6 +114,10 @@ Go to project root and run script:
 
 ## Changelog
 
+#### 1.1.0
+
+* Set default `notifyRemoteChanges: true`
+
 #### 1.0.0
 
 * Rewrite to ES6
